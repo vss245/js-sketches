@@ -1,15 +1,15 @@
 int cols, rows;
 int scl = 10;
-int w = 1600;
-int h = 900;
+int w = 2000;
+int h = 1000;
 int hour = hour();
 //map hour to 0 to 255
 //color color1 = color(map(hour,0,12,0,120),255,255);
 color color1 = color(0);
 color color2 = color(234, 58, 87);
 float[][] terrain;
-int min = -35;
-int max = 35;
+int min = -50;
+int max = 50;
 float flying = 0;
   
 void setup(){
@@ -56,4 +56,5 @@ void draw(){
     endShape();
   }
   draw_sphere();
+  saveFrame("frames/####.png");
 }
