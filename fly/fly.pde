@@ -19,7 +19,7 @@ void setup(){
   terrain = new float[cols][rows];
 }
 void draw(){
- flying -=0.01;
+ flying -=0.1;
   float yoffset = flying;
       for (int y = 0; y < rows; y++) {
       float xoffset = 0;
