@@ -54,13 +54,4 @@ void draw(){
     }
     endShape();
   }
-  noStroke();
-  fill(255);
-  pushMatrix();
-  translate(350, 35, 100);
-  lights();
-  spotLight(51, 102, 126, 50, 50, 400, 
-          0, 0, -1, PI/16, 500); 
-  sphere(50);
-  popMatrix();
 }
