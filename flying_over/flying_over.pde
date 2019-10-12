@@ -1,3 +1,4 @@
+//Dan Schiffman - Coding Train Challenge
 int cols, rows;
 int scl = 10;
 int w = 2000;
