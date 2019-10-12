@@ -1,2 +1,2 @@
-# reimagined-memory
-processing
+# processing sketches
+little sceneries made in processing
