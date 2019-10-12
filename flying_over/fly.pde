@@ -6,7 +6,7 @@ int hour = hour();
 //map hour to 0 to 255
 //color color1 = color(map(hour,0,12,0,120),255,255);
 color color1 = color(0);
-color color2 = color(234, 58, 87);
+color color2 = color(255, 156, 180);
 float[][] terrain;
 int min = -50;
 int max = 50;
@@ -19,7 +19,7 @@ void setup(){
   terrain = new float[cols][rows];
 }
 void draw(){
- flying -=0.1;
+ flying -=0.02;
   float yoffset = flying;
       for (int y = 0; y < rows; y++) {
       float xoffset = 0;
@@ -31,8 +31,8 @@ void draw(){
     }
     
   background(color1);
-  //stroke(color2);
-  noStroke();
+  stroke(color2);
+  //noStroke();
   
   translate(width/2,height/2);
   rotateX(PI/3);
