@@ -13,7 +13,7 @@ int max = 50;
 float flying = 0;
   
 void setup(){
-  size(1000,800,P3D);
+  size(500,500,P3D);
   cols = w/scl;
   rows = h/scl;
   terrain = new float[cols][rows];
@@ -56,5 +56,4 @@ void draw(){
     endShape();
   }
   draw_sphere();
-  saveFrame("frames/####.png");
 }
