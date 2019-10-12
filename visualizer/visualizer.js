@@ -1,21 +1,21 @@
 let sound,mic;
 var amplitude;
-
+var t;
 // function preload(){
 //   sound = loadSound('ambient.mp3');
 // }
 function setup() {
-  var canvas = createCanvas(1000,1000);
-  //canvas.mouseClicked(togglePlay);
+  var canvas = createCanvas(2000,1000);
   mic = new p5.AudioIn();
-  mic.start();
   fft = new p5.FFT();
+  mic.start();
   fft.setInput(mic);
-  background(0, 0, 0);
+  background(0);
   amplitude = new p5.Amplitude();
   angleMode(DEGREES);
 }
 function draw() {
+  background(0,30);
   var level = amplitude.getLevel();
   var amp = map(level, 0, 1, 0, 100);
   //background(color,0,0);
@@ -30,25 +30,27 @@ function draw() {
   var bassbg  = map(bass, 0, 255, 100, 255 );
   var midbg      = map(mid, 0, 255, 100, 255 );
   var trebg   = map(treble, 0, 255, 100, 255 );
-  background(bassbg,midbg,trebg);
-  noFill();
+  //background(bassbg,midbg,trebg);
   beginShape();
-  stroke(0);
+  var r = 255 * noise(t+10);
+  var g = 255 * noise(t+15);
+  var b = 255 * noise(t+20);
+  stroke(bassbg,midbg,trebg);
+  //stroke(r,g,b);
   strokeWeight(3);
   for (var i = 0; i< spectrum.length; i++){
     // var x = map(i, 0, waveform.length, 0, width);
     // var y = map( waveform[i], -1, 1, 0, height);
     var amp = spectrum[i];
     //var r = map(i, 0,amp.length, 0, width);
-    w = width/64;
+    w = width/256;
     var y = map(amp, 0,255,height,0);
     line(i*w,height,i*w,y)
     //vertex(x,y);
+    //t+=0.01;
   }
   translate(width/2,height/2);
   endShape();
-  fill(52, 116, 235,80);
-  noStroke();
 
 }
 // function togglePlay() {
