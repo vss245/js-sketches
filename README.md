@@ -1,2 +1,2 @@
-# processing sketches
-little sceneries made in processing
+# sketches
+little JS sketches
