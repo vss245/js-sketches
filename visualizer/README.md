@@ -1,1 +1,1 @@
-Very simple audio visualizer using a Fourier transform. Utilizes microphone input.
+very simple audio visualizer using a Fourier transform. utilizes microphone input.
