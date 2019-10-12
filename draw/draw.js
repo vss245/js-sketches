@@ -12,7 +12,7 @@ function setup() {
     t = 0;
 }
 function draw() {
-  background(0,5)
+  background(0,3)
   var x = width * noise(t);
   var y = height * noise(t+5);
   var r = 255 * noise(t+10);
@@ -24,7 +24,9 @@ function draw() {
   ellipse(mouseX,mouseY,size,size)
   t += 0.01;
   fill(r,g,b);
-  addNewParticle();
+  if (mouseX > pmouseX || pmouseX > mouseX) {
+    addNewParticle();
+  }
   for (var particleA = 0; particleA < mass.length; particleA++) {
   var accelerationX = 0, accelerationY = 0;
 
@@ -67,7 +69,7 @@ function keyPressed() {
     background(0);
 }
 function addNewParticle() {
-	mass.push(random(0.003, 0.03));
+	mass.push(random(0.001, 0.05));
 	positionX.push(mouseX);
 	positionY.push(mouseY);
 	velocityX.push(randomGaussian());
