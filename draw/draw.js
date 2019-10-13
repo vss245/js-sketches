@@ -11,15 +11,15 @@ function setup() {
     createCanvas(2000, 1000);
     background(0);
     t = 0;
-    colslider = createSlider(0, 0.01, 0.001, 0.001);
+    colslider = createSlider(0, 0.1, 0.01, 0.001);
     colslider.position(20, 30);
     colslider.style('width', '80px');
     vslider = createSlider(0.003, 0.05, 0.02, 0.001);
     vslider.position(20, 50);
     vslider.style('width', '80px');
-    accslider = createSlider(0, 500, 250, 1);
-    accslider.position(20, 70);
-    accslider.style('width', '80px');
+    // accslider = createSlider(0, 500, 250, 1);
+    // accslider.position(20, 70);
+    // accslider.style('width', '80px');
 }
 function draw() {
   background(0,3)
@@ -27,7 +27,7 @@ function draw() {
   text('click and drag', 20,25);
   text('speed of color change', colslider.x * 2 + colslider.width,45);
   text('range of particle mass', vslider.x * 2 + vslider.width,65);
-  text('acceleration scaling', vslider.x * 2 + vslider.width,85);
+  //text('acceleration scaling', vslider.x * 2 + vslider.width,85);
   text('press any key to clear', 20,125);
   var x = width * noise(t);
   var y = height * noise(t+5);
@@ -61,8 +61,10 @@ function draw() {
       accelerationY += force * relativeVelocityY;
   }
 }
-  velocityX[particleA] = velocityX[particleA] * 0.9 + accelerationX * mass[particleA] * accslider.value();
-  velocityY[particleA] = velocityY[particleA] * 0.9 + accelerationY * mass[particleA] * accslider.value();
+  velocityX[particleA] = velocityX[particleA] * 0.9 + accelerationX * mass[particleA]*256;
+  //* accslider.value();
+  velocityY[particleA] = velocityY[particleA] * 0.9 + accelerationY * mass[particleA]*256;
+  //* accslider.value();
 }
 
 for (var particle = 0; particle < mass.length; particle++) {
