@@ -12,4 +12,4 @@ cell_aut - cellular automaton (game of life)
 
 # based on:
 
-p5, Tone, Processing, CodingTrain tutorials
+codingtrain tutorials, https://natureofcode.com/
