@@ -1,6 +1,6 @@
 # intro:
 
-first foray into javascript with p5.js, processing and tone.js
+art with javascript with p5.js, processing and tone.js
 
 draw - relaxing drawing tool, kind of pointless
 
