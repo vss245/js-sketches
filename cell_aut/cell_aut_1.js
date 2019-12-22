@@ -13,17 +13,27 @@ var rows;
 var sum;
 
 function setup() {
-	createCanvas(400, 400);
+	createCanvas(400, 420);
 	background(0);
-	cols = width/res;
-	rows = height/res;
+	cols = 400/res;
+	rows = 400/res;
 	fill(255);
 	stroke(0);
 	grid = make2darray(cols,rows);
-	for (i=0;i<cols;i++) {
+	seed();
+	text('Press n to restart',0,420);
+}
+
+function seed() {
+for (i=0;i<cols;i++) {
 		for (j=0;j<rows;j++) {
 			grid[i][j]=floor(random(2));
 	}
+	}
+}
+function keyPressed() {
+	if (keyCode === 78) {
+		seed();
 	}
 }
 
