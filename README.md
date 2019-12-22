@@ -8,7 +8,7 @@ synth - drawing-based synthesizer (in progress)
 
 visualizer - simple music visualizer (amp & freq)
 
-cell_aut - cellular automaton (game of life)
+cell_aut - cellular automata (game of life, rule 90)
 
 # based on:
 
