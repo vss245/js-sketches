@@ -1,14 +1,12 @@
 # intro:
 
-art with javascript with p5.js, processing and tone.js
+small sketches using p5.js
 
-draw - relaxing drawing tool, kind of pointless
+draw - drawing tool with particles
 
-synth - drawing-based synthesizer (in progress)
+visualizer - simple music visualizer, only works if run from local server (amp & freq)
 
-visualizer - simple music visualizer (amp & freq)
-
-cell_aut - cellular automata (game of life, rule 90)
+cell_aut - cellular automata (game of life, sierpinski triangle)
 
 # based on:
 
